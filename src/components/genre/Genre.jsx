@@ -11,13 +11,13 @@ const Genre = ({ data, setSelectedGenre, selectedGenre }) => {
     }
   };
   return (
-    <div className="container flex gap-3 overflow-auto p-2">
+    <div className="container flex gap-3 overflow-auto p-2 mb-8">
       {data?.map((item) => (
         <div
           onClick={() => handleChange(item.id)}
           key={item.id}
-          className={`whitespace-nowrap p-1 bg-slate-200 rounded-none hover:cursor-pointer select-none ${
-            selectedGenre.includes(item.id) ? "bg-slate-500" : ""
+          className={`whitespace-nowrap p-2 border border-[#C61F1F] text-white rounded-md hover:cursor-pointer select-none ${
+            selectedGenre.includes(item.id) ? "bg-[#C61F1F]" : ""
           }`}
         >
           {item.name}
