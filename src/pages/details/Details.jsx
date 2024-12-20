@@ -140,7 +140,15 @@ const Details = () => {
               />
             </svg>
           </button>
-      
+          <div class="mt-96 absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+            <h1 class="text-2xl md:text-5xl font-bold mb-4">{data?.title}</h1>
+            <p class="text-sm md:text-lg mb-6">
+              2024 • Комедия • 1ч 34мин • EN •
+            </p>
+            <button class="bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-full shadow-lg">
+              Купить билет
+            </button>
+          </div>
         </div>
         <div className="detail-list w-[380px] mt-12">
           <div className="first-buttons grid grid-cols-2">
