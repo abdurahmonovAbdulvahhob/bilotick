@@ -7,12 +7,27 @@ import "swiper/css/navigation";
 import "../carousel/Swiper.css";
 
 import { Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
-const Movies = ({ data }) => {
+const Movies = ({ data ,isDetail}) => {
   console.log(data);
   return (
     <div>
-      <div className="flex gap-2 justify-center flex-wrap container">
+      <div className=" relative flex gap-2 justify-center flex-wrap container">
+        {isDetail ? (
+          <h3 className="text-white text-xl absolute left-7 -top-10">
+            На неделе
+          </h3>
+        ) : (
+          ""
+        )}
+        {isDetail ? (
+          <Link to={"/"} className="text-primary text-lg absolute right-7 -top-10">
+            {"Показать все >"}
+          </Link>
+        ) : (
+          ""
+        )}
         <Swiper
           loop={true}
           navigation={true}

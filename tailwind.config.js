@@ -7,7 +7,7 @@ export default {
     colors: {
       ...colors,
       primary: "#C61F1F",
-      secondary: "#1E1E1E",
+      secondary: "#000",
     },
     fontFamily: {},
     container: {
